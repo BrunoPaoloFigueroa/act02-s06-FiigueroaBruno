@@ -1,0 +1,5 @@
+Ahorro Sueldo|100.0|2.5
+Ahorro Digital|100.0|3.0
+Depósito Plazo Fijo|100.0|6.0
+Depósito Plazo Fijo|100.0|6.0
+Ahorro Sueldo|100.0|2.5
