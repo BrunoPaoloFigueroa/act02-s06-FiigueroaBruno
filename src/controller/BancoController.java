@@ -30,14 +30,26 @@ public class BancoController {
             default:
                 throw new IllegalArgumentException("Tipo de cuenta inválido");
         }
-        CuentaAhorro cuenta = factory.crearCuenta(monto, tutor);
+        CuentaAhorro cuenta = factory.crearCuenta(monto, tutor); // Pasar el tutor aquí
         guardarCuentaEnArchivo(cuenta);
         return cuenta;
     }
 
     private void guardarCuentaEnArchivo(CuentaAhorro cuenta) {
         try (BufferedWriter writer = new BufferedWriter(new FileWriter("cuentas.txt", true))) {
-            writer.write(cuenta.getTipo() + "|" + cuenta.getMonto() + "|" + cuenta.getTasaInteres() + "\n");
+
+            writer.write("Tipo: " + cuenta.getTipo() + "|");
+            writer.write("Saldo: $" + cuenta.getMonto() + "|");
+            writer.write("Tasa de Interés: " + cuenta.getTasaInteres() + "%|");
+
+
+            if (cuenta.getTutor() != null && !cuenta.getTutor().isEmpty()) {
+                writer.write("Tutor: " + cuenta.getTutor() + "|");
+            }
+
+            writer.write("Titulares: " + cuenta.getCantidadTitulares() + "|");
+            writer.write("Retiros ATM: " + cuenta.getRetirosPermitidosATM() + "/mes\n");
+
         } catch (IOException e) {
             e.printStackTrace();
         }

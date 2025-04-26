@@ -1,5 +1,2 @@
-Ahorro Sueldo|100.0|2.5
-Ahorro Digital|100.0|3.0
-Depósito Plazo Fijo|100.0|6.0
-Depósito Plazo Fijo|100.0|6.0
-Ahorro Sueldo|100.0|2.5
+Tipo: Ahorro Sueldo|Saldo: $100.0|Tasa de Interés: 2.5%|Titulares: 1|Retiros ATM: 5/mes
+Tipo: Cuenta para Menores|Saldo: $100.0|Tasa de Interés: 1.5%|Tutor: xffff|Titulares: 1|Retiros ATM: 0/mes

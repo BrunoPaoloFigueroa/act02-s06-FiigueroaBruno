@@ -54,8 +54,9 @@ public class BancoGUI extends JFrame {
             try {
                 String tipo = (String) tipoCuentaCombo.getSelectedItem();
                 double monto = Double.parseDouble(montoField.getText());
-                String tutor = tutorField.getText().isEmpty() ? null : tutorField.getText();
+                String tutor = tutorField.getText().isEmpty() ? null : tutorField.getText(); // Asegurarnos de que se pase el tutor
 
+                // Crear la cuenta usando el controller
                 CuentaAhorro cuenta = controller.crearCuenta(tipo, monto, tutor);
 
                 StringBuilder detalles = new StringBuilder();
